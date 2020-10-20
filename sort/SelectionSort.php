@@ -1,5 +1,6 @@
 <?php
 /**
+ * 复杂度O(n2)
  * 选择排序 - 交换排序
  */
 function selectionSort(array $arr){

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * 复杂度O(n2)
+ * 插入排序
+ * @param array $arr
+ * @return array
+ */
 function insertSort(array $arr){
     if(count($arr) <= 1){
         return $arr;
@@ -7,21 +12,15 @@ function insertSort(array $arr){
     $length = count($arr);
     for($i = 1; $i < $length; $i++){
         $temp = $arr[$i];
-        for($j = $i - 1; $j >= 0; $j--){
-            if($temp >= $arr[$j]){
-                if($j+1 == $i){
-                    break;
-                }else{
-                    $arr[$j+1] = $temp;
-                    break;
-                }
+        $j = $i - 1;
+        for(; $j >= 0; $j--){
+            if($arr[$j] > $temp){
+                $arr[$j + 1] = $arr[$j];//数据移动
             }else{
-                $arr[$j + 1] = $arr[$j];
-                if($j == 0){
-                    $arr[0] = $temp;
-                }
+                break;
             }
         }
+        $arr[$j + 1] = $temp;//插入数据
     }
     return $arr;
 }

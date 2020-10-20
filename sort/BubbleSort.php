@@ -1,5 +1,6 @@
 <?php
 /**
+ * 复杂度O(n2)
  * 冒泡排序 - 交换排序
  */
 function bubbleSort(array $arr){
