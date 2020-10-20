@@ -1,6 +1,6 @@
 <?php
 /**
- * 选择排序
+ * 选择排序 - 交换排序
  */
 function selectionSort(array $arr){
     if(count($arr) <= 1){

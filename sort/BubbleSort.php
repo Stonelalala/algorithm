@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * 冒泡排序 - 交换排序
+ */
 function bubbleSort(array $arr){
     if(count($arr) <= 1){
         return $arr;
